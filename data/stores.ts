@@ -1,0 +1,86 @@
+import type { Store } from "@/types";
+
+export const stores: Store[] = [
+  {
+    id: "durban",
+    name: "Checkstar Durban",
+    address: "18/26 Bertha Mkhize Street",
+    suburb: "Durban CBD",
+    city: "Durban",
+    province: "KwaZulu-Natal",
+    phone: "060 567 8601",
+    hours: {
+      weekdays: "07:00 – 19:00",
+      saturday: "07:00 – 19:00",
+      sunday: "09:00 – 19:00",
+      fridayNote: "Closed 12:15 – 13:15 for Jumu'ah",
+    },
+    coordinates: { lat: -29.855057, lng: 31.020138 },
+    image:
+      "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=1200",
+    isOpen: true,
+    services: [
+      "Master Butchery",
+      "Scratch Bakery",
+      "Hot Foods & Deli",
+      "ATM",
+      "Halaal Certified",
+      "Wheelchair Accessible",
+    ],
+  },
+  {
+    id: "mount-edgecombe",
+    name: "Checkstar Mount Edgecombe",
+    address: "3333 Mark House Place, Chris Hani Road",
+    suburb: "White House Centre, Phoenix",
+    city: "Durban North",
+    province: "KwaZulu-Natal",
+    phone: "031 539 4508",
+    hours: {
+      weekdays: "07:00 – 20:00",
+      saturday: "07:00 – 20:00",
+      sunday: "08:00 – 19:00",
+      fridayNote: "Closed 12:15 – 13:15 for Jumu'ah",
+    },
+    coordinates: { lat: -29.7136, lng: 31.0158 },
+    image:
+      "https://images.unsplash.com/photo-1534723452862-4c874018d66d?auto=format&fit=crop&q=80&w=1200",
+    isOpen: true,
+    services: [
+      "Master Butchery",
+      "Scratch Bakery",
+      "Hot Foods & Deli",
+      "ATM",
+      "Halaal Certified",
+      "Wheelchair Accessible",
+      "Baby Change Facility",
+    ],
+  },
+  {
+    id: "overport",
+    name: "Checkstar Overport",
+    address: "99 Cannon Avenue",
+    suburb: "Overport",
+    city: "Durban",
+    province: "KwaZulu-Natal",
+    phone: "087 158 1438",
+    hours: {
+      weekdays: "07:00 – 21:00",
+      saturday: "07:00 – 21:00",
+      sunday: "07:00 – 21:00",
+      fridayNote: "Closed 12:15 – 13:15 for Jumu'ah",
+    },
+    coordinates: { lat: -29.835854, lng: 30.98969 },
+    image:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200",
+    isOpen: true,
+    services: [
+      "Master Butchery",
+      "Scratch Bakery",
+      "Hot Foods & Deli",
+      "ATM",
+      "Halaal Certified",
+      "Wheelchair Accessible",
+    ],
+  },
+];

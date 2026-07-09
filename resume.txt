@@ -1,0 +1,92 @@
+CHECKSTAR WEBSITE — SESSION NOTES
+Last updated: 2026-07-09
+================================================================================
+
+PROJECT
+  Next.js 16.2.10, React 19, TypeScript, Tailwind CSS v4 (CSS-first @theme {})
+  Location: C:\Users\scorp\Desktop\AppDev\checkstar
+  Dev server: npx next dev (http://localhost:3000)
+
+
+WHAT'S DONE
+  ✅ Layout — AnnouncementBar, Header (sticky, mobile nav), Footer (with newsletter)
+  ✅ Home page — Hero (Embla carousel), PromotionsBand, DepartmentsSection,
+                  RecipesSection, CommunitySection, StoreLocatorSection,
+                  SocialFeedSection (CSS ticker, real /socials/ files, auto-animate)
+  ✅ /about
+  ✅ /departments  (listing page)
+  ✅ /departments/[slug]  (6 department sub-pages via generateStaticParams)
+  ✅ /promotions  (listing page)
+  ✅ /promotions/[slug]  (4 promotion sub-pages: monthly-specials, market-day,
+                          mid-month, month-end)
+  ✅ /consumer-services
+  ✅ /recipes  (listing page)
+  ✅ /recipes/[slug]  (12 recipe sub-pages)
+  ✅ /store-locator
+  ✅ Flipbook catalogue (components/ui/FlipbookViewer.tsx)
+       - Renders PDFs from /public/specials/1.pdf, 2.pdf, 3.pdf
+       - Direct pdfjs-dist rendering (no react-pdf), worker at /public/pdf.worker.min.mjs
+       - react-pageflip with page-flip sound (WebAudio), share buttons (WA/FB/X/copy)
+       - Flip animation state tracking, orange glow on active arrow
+       - Height + width constrained scale — full PDF visible, not clipped
+  ✅ Newsletter removed from all inner pages (footer only)
+  ✅ Production build passes cleanly — 32 static pages, 0 errors
+
+
+WHAT'S NOT YET BUILT
+  These pages are in the original brief but have no route yet:
+
+  [ ] /tips  (Tips 4 You — recipe tips / food hacks content)
+  [ ] /community  (community stories, events, local highlights)
+  [ ] /activations  (in-store activations / events calendar)
+  [ ] /gallery  (photo/video gallery)
+  [ ] /head-office  (head office contact / directions)
+  [ ] /careers  (job listings — static copy is fine)
+  [ ] /competitions  (competitions / giveaways)
+  [ ] /contact  (general contact form or info page)
+
+  These may be out of scope for v1 launch — confirm with client before building.
+
+
+THINGS TO WATCH
+  - Halaal: NEVER mention wine, beer, spirits, pork, or cider in any copy.
+  - pdfjs worker: /public/pdf.worker.min.mjs must stay in sync with
+    node_modules/pdfjs-dist version. Don't upgrade pdfjs-dist without recoping.
+  - Tailwind v4: no tailwind.config.js — all tokens are in app/globals.css @theme {}.
+    Adding new colours/fonts = add to globals.css, not a config file.
+  - Lucide React v1: no Facebook/Instagram/YouTube icons. Use inline SVGs (see
+    FlipbookViewer.tsx IcoWA/IcoFB/IcoX for the pattern).
+  - SSR and dynamic imports: any component that uses pdfjs or browser-only APIs
+    must be wrapped in a "use client" file and imported with { ssr: false }.
+    Example: CatalogueSection.tsx wraps FlipbookViewer.tsx.
+
+
+NEXT SESSION — SUGGESTED ORDER
+  1. Confirm with client which of the missing pages are needed for v1.
+  2. If /contact is needed — build a simple form page (name, email, message).
+     No back-end required; mailto: action or a static "call us" page is fine.
+  3. If /careers — static page, list a few roles with a "send CV to" email.
+  4. If /community or /activations — these need content from the client first.
+  5. Final QA pass:
+       - Check all internal links in Header nav go somewhere (no dead routes).
+       - Check mobile layout on each built page (especially flipbook modal).
+       - Check /promotions/month-end — no pdfUrl, so CatalogueSection should
+         not render (confirm the conditional in [slug]/page.tsx is working).
+  6. Domain / deployment: confirm hosting (Vercel recommended for Next.js).
+     Set NEXT_PUBLIC_SITE_URL env var — currently hardcoded in FlipbookViewer
+     share links as window.location.href (fine for now).
+
+
+KEY FILES TO KNOW
+  app/globals.css              — all design tokens, ticker animation keyframes
+  app/layout.tsx               — root layout, fonts, Header, Footer
+  data/promotions.ts           — promotion data + pdfUrl mappings
+  data/recipes.ts              — recipe data
+  components/ui/FlipbookViewer.tsx   — PDF flipbook (complex, ~520 lines)
+  components/ui/CatalogueSection.tsx — "use client" SSR wrapper for flipbook
+  components/sections/home/SocialFeedSection.tsx  — Instagram ticker feed
+  public/specials/1.pdf  2.pdf  3.pdf   — catalogue PDFs
+  public/pdf.worker.min.mjs            — pdfjs worker (must match pdfjs-dist ver)
+  public/socials/                       — real social feed images + videos
+
+================================================================================
