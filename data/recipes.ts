@@ -59,7 +59,7 @@ export const recipes: Recipe[] = [
       alt: "Golden cinnamon french toast with banana and honey",
     },
     tags: ["Breakfast", "Quick", "Family", "Baking"],
-    featured: false,
+    featured: true,
     ingredients: [
       "4 thick slices white bread (from Checkstar Scratch Bakery)",
       "3 eggs",
@@ -97,7 +97,7 @@ export const recipes: Recipe[] = [
       alt: "Durban bunny chow — curry in hollowed bread loaf",
     },
     tags: ["Lunch", "Durban", "South African", "Family", "Chicken"],
-    featured: true,
+    featured: false,
     ingredients: [
       "500g chicken pieces (or beef stewing pieces)",
       "2 tbsp vegetable oil",
@@ -177,7 +177,7 @@ export const recipes: Recipe[] = [
       alt: "Beef potjie cooking over coals",
     },
     tags: ["Family", "Braai", "Slow Cook", "Beef"],
-    featured: true,
+    featured: false,
     ingredients: [
       "1.5kg Checkstar AAA stewing beef, cubed",
       "2 tbsp vegetable oil",
@@ -217,7 +217,7 @@ export const recipes: Recipe[] = [
       alt: "Peri-peri chicken on the braai",
     },
     tags: ["Braai", "Chicken", "Peri-Peri", "Summer"],
-    featured: false,
+    featured: true,
     ingredients: [
       "1 whole free-range chicken, spatchcocked",
       "4 tbsp peri-peri sauce",
@@ -457,7 +457,7 @@ export const recipes: Recipe[] = [
       alt: "Slice of spiced carrot cake with cream cheese icing",
     },
     tags: ["Baking", "Cake", "Family", "Afternoon Tea"],
-    featured: false,
+    featured: true,
     ingredients: [
       "2 cups cake flour",
       "2 tsp baking powder",

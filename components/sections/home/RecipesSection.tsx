@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, Users, ArrowRight, ChefHat } from "lucide-react";
-import { featuredRecipes, recipes } from "@/data/recipes";
+import { featuredRecipes } from "@/data/recipes";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { cn } from "@/lib/utils";
 
@@ -12,8 +12,8 @@ const difficultyColor = {
 };
 
 export function RecipesSection() {
-  const [hero, secondary] = featuredRecipes;
-  const extraRecipes = recipes.filter((r) => !r.featured).slice(0, 2);
+  const [hero, ...rest] = featuredRecipes;
+  const sideCards = rest.slice(0, 3);
 
   return (
     <section
@@ -93,49 +93,47 @@ export function RecipesSection() {
             </AnimateOnScroll>
           )}
 
-          {/* Secondary + extra — right side */}
+          {/* Side cards — right side */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            {[secondary, ...extraRecipes].filter(Boolean).slice(0, 2).map((recipe, i) => (
-              recipe && (
-                <AnimateOnScroll key={recipe.id} delay={0.1 + i * 0.08}>
-                  <Link
-                    href={`/recipes/${recipe.slug}`}
-                    className="group flex gap-4 bg-white border border-ink-100 rounded-lg overflow-hidden hover:shadow-card transition-shadow duration-300"
-                    aria-label={`View recipe: ${recipe.title}`}
-                  >
-                    {/* Thumbnail */}
-                    <div className="relative w-28 shrink-0 bg-ink-100">
-                      <Image
-                        src={recipe.image.src}
-                        alt={recipe.image.alt}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="112px"
-                      />
-                    </div>
+            {sideCards.map((recipe, i) => (
+              <AnimateOnScroll key={recipe.id} delay={0.1 + i * 0.08}>
+                <Link
+                  href={`/recipes/${recipe.slug}`}
+                  className="group flex gap-4 bg-white border border-ink-100 rounded-lg overflow-hidden hover:shadow-card transition-shadow duration-300"
+                  aria-label={`View recipe: ${recipe.title}`}
+                >
+                  {/* Thumbnail */}
+                  <div className="relative w-28 h-full shrink-0 bg-ink-100">
+                    <Image
+                      src={recipe.image.src}
+                      alt={recipe.image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="112px"
+                    />
+                  </div>
 
-                    {/* Content */}
-                    <div className="flex-1 py-4 pr-4">
-                      <span className={cn("inline-block text-[10px] font-bold px-2 py-0.5 rounded-sm mb-2", difficultyColor[recipe.difficulty])}>
-                        {recipe.difficulty}
+                  {/* Content */}
+                  <div className="flex-1 py-4 pr-4">
+                    <span className={cn("inline-block text-[10px] font-bold px-2 py-0.5 rounded-sm mb-2", difficultyColor[recipe.difficulty])}>
+                      {recipe.difficulty}
+                    </span>
+                    <h3 className="text-sm font-bold text-ink tracking-tight mb-1 group-hover:text-orange transition-colors duration-200">
+                      {recipe.title}
+                    </h3>
+                    <div className="flex items-center gap-3 text-[11px] text-ink-400">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" aria-hidden="true" />
+                        {recipe.prepTime}
                       </span>
-                      <h3 className="text-sm font-bold text-ink tracking-tight mb-1 group-hover:text-orange transition-colors duration-200">
-                        {recipe.title}
-                      </h3>
-                      <div className="flex items-center gap-3 text-[11px] text-ink-400">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" aria-hidden="true" />
-                          {recipe.prepTime}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Users className="w-3 h-3" aria-hidden="true" />
-                          {recipe.servings}
-                        </span>
-                      </div>
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3 h-3" aria-hidden="true" />
+                        {recipe.servings}
+                      </span>
                     </div>
-                  </Link>
-                </AnimateOnScroll>
-              )
+                  </div>
+                </Link>
+              </AnimateOnScroll>
             ))}
 
             {/* CTA card */}

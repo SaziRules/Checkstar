@@ -9,7 +9,7 @@ export const departments: Department[] = [
     description:
       "Crisp, vibrant produce sourced directly from regional South African farmers. No long-haul cold chains, no compromise.",
     image: {
-      src: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800",
+      src: "/images/veg.png",
       alt: "Abundant fresh fruit and vegetables at Checkstar",
     },
     href: "/departments/fresh-produce",
@@ -22,7 +22,7 @@ export const departments: Department[] = [
     description:
       "Our community blockmen prepare every cut on site, daily. Premium AAA-grade beef, free-range poultry, and artisanal marinades.",
     image: {
-      src: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=800",
+      src: "/images/fresh-meat.png",
       alt: "Expert butcher preparing premium cuts at Checkstar",
     },
     href: "/departments/butchery",
@@ -61,7 +61,7 @@ export const departments: Department[] = [
     description:
       "A curated selection of household staples, international products, and local favourites at prices that respect your budget.",
     image: {
-      src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800",
+      src: "/images/grocerry.jpg",
       alt: "Well-stocked grocery aisles at Checkstar",
     },
     href: "/departments/grocery",

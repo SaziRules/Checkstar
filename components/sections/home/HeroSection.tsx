@@ -37,16 +37,17 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-ink lg:!h-full"
+      className="relative w-full bg-ink lg:!h-full"
       style={{ height: "clamp(520px, 68vh, 760px)" }}
       aria-label="Hero"
     >
       {/* ── Carousel images ─────────────────────────────────────────── */}
-      <div className="embla absolute inset-0" ref={emblaRef}>
+      <div className="embla absolute inset-0 overflow-hidden" ref={emblaRef}>
         <div className="embla__container h-full">
           {heroSlides.map((s, i) => (
             <div key={s.id} className="embla__slide relative h-full">
               <Image
+                key={s.image.src}
                 src={s.image.src}
                 alt={s.image.alt}
                 fill

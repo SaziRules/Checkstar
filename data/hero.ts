@@ -10,7 +10,7 @@ export const heroSlides: HeroSlide[] = [
     cta: { label: "Browse This Week's Specials", href: "/promotions" },
     secondaryCta: { label: "Find a Store", href: "/store-locator" },
     image: {
-      src: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=85&w=1920",
+      src: "/images/veg.png",
       alt: "Abundant fresh produce display at Checkstar",
     },
   },
@@ -23,7 +23,7 @@ export const heroSlides: HeroSlide[] = [
     cta: { label: "View Butchery Specials", href: "/promotions/market-day" },
     secondaryCta: { label: "Our Departments", href: "/departments" },
     image: {
-      src: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=85&w=1920",
+      src: "/images/fresh-meat.png",
       alt: "Premium fresh meat at Checkstar's master butchery",
     },
   },
@@ -36,7 +36,7 @@ export const heroSlides: HeroSlide[] = [
     cta: { label: "Our Community Story", href: "/community" },
     secondaryCta: { label: "Meet Our Stores", href: "/store-locator" },
     image: {
-      src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=85&w=1920",
+      src: "/images/grocerry.jpg",
       alt: "Friendly Checkstar staff serving customers",
     },
   },

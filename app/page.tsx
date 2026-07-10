@@ -31,7 +31,9 @@ export default function HomePage() {
         <div className="flex-1 min-h-0">
           <HeroSection />
         </div>
-        <QuickAccessSection />
+        <div className="shrink-0">
+          <QuickAccessSection />
+        </div>
       </div>
 
       <PromotionsBand />
