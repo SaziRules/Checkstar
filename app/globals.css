@@ -122,6 +122,25 @@
 
 /* ─── LEAFLET MARKER STYLES ─────────────────────────────────────────────────── */
 
+/* ─── GALLERY TICKER ────────────────────────────────────────────────────────── */
+
+@keyframes gallery-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.gallery-ticker {
+  animation: gallery-marquee 22s linear infinite;
+  will-change: transform;
+}
+
+/* ─── HERO PROGRESS BAR ─────────────────────────────────────────────────────── */
+
+@keyframes heroProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
 /* ─── SOCIAL FEED TICKER ────────────────────────────────────────────────────── */
 
 @keyframes social-ticker {

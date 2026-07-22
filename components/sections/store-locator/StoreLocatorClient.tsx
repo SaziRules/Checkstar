@@ -65,7 +65,7 @@ const SERVICE_ICONS: Record<string, React.ElementType> = {
   "Scratch Bakery": Wheat,
   "Hot Foods & Deli": Flame,
   "ATM": CreditCard,
-  "Halaal Certified": Award,
+  "Halaal Friendly": Award,
   "Wheelchair Accessible": Accessibility,
   "Baby Change Facility": Baby,
   "Pharmacy": Pill,

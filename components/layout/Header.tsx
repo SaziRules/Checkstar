@@ -201,7 +201,7 @@ function MegaMenu({ type, onClose }: { type: MegaType; onClose: () => void }) {
       transition={{ duration: 0.18, ease: "easeOut" }}
       className="absolute top-full left-0 right-0 bg-ink border-t border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.7)]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between pt-4 pb-3 border-b border-white/8">
           <p className="text-[10px] font-bold tracking-widest uppercase text-white/35">
             {megaTitles[type]}
@@ -421,7 +421,7 @@ export function Header() {
             : "border-b border-white/8"
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-[72px] lg:h-[88px]">
 
             {/* Logo */}
@@ -491,6 +491,15 @@ export function Header() {
               >
                 <MapPin className="w-3.5 h-3.5 text-orange shrink-0" aria-hidden="true" />
                 Find a Store
+              </Link>
+
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.checkstar.za&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-white bg-orange rounded-full px-3.5 py-1.5 hover:bg-orange-hover transition-colors duration-200"
+              >
+                Shop Online
               </Link>
 
               <button

@@ -325,7 +325,7 @@ export default function ConsumerServicesPage() {
               <div className="space-y-3">
                 {[
                   { label: "Large families & households", note: "Bulk produce, meat, and pantry packs" },
-                  { label: "Mosques & religious functions", note: "Halaal-certified catering across all departments" },
+                  { label: "Mosques & religious functions", note: "Halaal-friendly catering across all departments" },
                   { label: "Schools & educational institutions", note: "Tuck shop stocking, event catering, feeding schemes" },
                   { label: "Corporate offices & businesses", note: "Deli platters, drinks, and pantry restocking" },
                   { label: "Events & celebrations", note: "Custom braai packs, catering platters, cakes" },

@@ -1,12 +1,13 @@
 export interface HeroSlide {
   id: string;
   eyebrow: string;
-  headline: string[];
+  headline: (string | { plain: string; highlight: string })[];
   subtext: string;
   cta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   image: { src: string; alt: string };
   theme?: "dark" | "light";
+  variant?: "app";
 }
 
 export interface NavItem {
@@ -87,4 +88,25 @@ export interface CommunityStory {
   image: { src: string; alt: string };
   category: string;
   date: string;
+}
+
+export interface TipSection {
+  heading?: string;
+  body: string[];
+}
+
+export interface Tip {
+  id: string;
+  title: string;
+  slug: string;
+  category: "Shopping" | "Storage" | "Cooking" | "Health" | "Budget" | "Seasonal";
+  excerpt: string;
+  date: string;
+  readTime: string;
+  image: { src: string; alt: string };
+  tags: string[];
+  featured?: boolean;
+  intro: string;
+  sections: TipSection[];
+  keyTakeaways?: string[];
 }

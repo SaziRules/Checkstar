@@ -17,7 +17,7 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Checkstar is KwaZulu-Natal's halaal-certified independent supermarket. Three branches across Durban — Durban CBD, Overport, and Phoenix — delivering fresh produce, master butchery, and great value every day.",
+    "Checkstar is KwaZulu-Natal's halaal-conscious independent supermarket. Three branches across Durban — Durban CBD, Overport, and Phoenix — delivering fresh produce, master butchery, and great value every day.",
 };
 
 /* ── Stakeholder commitments ─────────────────────────────────────────────── */
@@ -71,12 +71,12 @@ const HALAAL_POINTS = [
   {
     icon: ShieldCheck,
     title: "Certified across all branches",
-    body: "Every Checkstar store — Durban CBD, Overport, and Phoenix — carries full halaal certification. No exceptions, no partial compliance.",
+    body: "Every Checkstar store — Durban CBD, Overport, and Phoenix — is run with halaal values at the core.",
   },
   {
     icon: CheckCircle,
-    title: "Halaal-vetted suppliers",
-    body: "Every product on our shelves is sourced from halaal-approved suppliers. Our buying team verifies certification before any product enters the store.",
+    title: "Halaal-aligned suppliers",
+    body: "Every product on our shelves is sourced from suppliers who share our halaal values. Our buying team takes care to ensure alignment before any product enters the store.",
   },
   {
     icon: Clock,
@@ -101,11 +101,11 @@ const DEPT_ICONS: Record<string, { icon: React.ElementType; accent: string }> = 
 const FAQ = [
   {
     q: "What is Checkstar?",
-    a: "Checkstar is an independent, halaal-certified supermarket group based in KwaZulu-Natal. We operate three full-service stores across the greater Durban area — in Durban CBD, Overport, and Phoenix — serving the local community with fresh produce, master butchery, scratch bakery, hot foods, grocery, and beverages.",
+    a: "Checkstar is an independent, halaal-conscious supermarket group based in KwaZulu-Natal. We operate three full-service stores across the greater Durban area — in Durban CBD, Overport, and Phoenix — serving the local community with fresh produce, master butchery, scratch bakery, hot foods, grocery, and beverages.",
   },
   {
     q: "Is Checkstar halaal?",
-    a: "Yes — 100%. All three Checkstar branches are fully halaal-certified. Every product, every supplier, and every department is held to strict halaal standards. We also close all stores from 12:15 to 13:15 every Friday for Jumu'ah prayers.",
+    a: "Yes. All three Checkstar branches operate with halaal values at the core. Our product range and supplier base reflect our commitment to halaal principles, and all stores close from 12:15 to 13:15 every Friday for Jumu'ah prayers.",
   },
   {
     q: "Where are Checkstar stores located?",
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="text-base text-white/55 font-light leading-relaxed max-w-md mb-8">
-                Checkstar is KwaZulu-Natal&apos;s premium halaal-certified independent food retailer — built to deliver a full hyperstore experience while staying genuinely invested in every customer, employee, and community we touch.
+                Checkstar is KwaZulu-Natal&apos;s premium halaal-conscious independent food retailer — built to deliver a full hyperstore experience while staying genuinely invested in every customer, employee, and community we touch.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -243,7 +243,7 @@ export default function AboutPage() {
                   Checkstar was built with a clear purpose: to deliver a premium hyperstore food retail experience to KwaZulu-Natal families — without losing sight of the people on both sides of the counter. From our Durban CBD branch on Bertha Mkhize Street to our Overport and Phoenix stores, we serve diverse communities across the greater Durban metropolitan area every single day.
                 </p>
                 <p>
-                  As an independent halaal-certified retailer, every decision we make is guided by four commitments: giving customers the right products at the right price, building a company culture our team is proud to be part of, running the business with integrity, and acting as a genuinely responsible presence in the communities we serve.
+                  As an independent halaal-conscious retailer, every decision we make is guided by four commitments: giving customers the right products at the right price, building a company culture our team is proud to be part of, running the business with integrity, and acting as a genuinely responsible presence in the communities we serve.
                 </p>
                 <p>
                   We don&apos;t outsource our values. You&apos;ll find them in our{" "}
@@ -287,7 +287,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Halaal commitment ─────────────────────────────────────────────── */}
-      <section className="bg-ink py-16 lg:py-20 border-t border-white/8" aria-label="Halaal certification">
+      <section className="bg-ink py-16 lg:py-20 border-t border-white/8" aria-label="Halaal commitment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -297,20 +297,20 @@ export default function AboutPage() {
                   <ShieldCheck className="w-5 h-5 text-green-400" aria-hidden="true" />
                 </div>
                 <p className="text-[11px] font-bold tracking-widest uppercase text-green-400">
-                  Halaal Certified
+                  Halaal Conscious
                 </p>
               </div>
               <h2
                 className="font-extrabold tracking-tight text-white leading-[1.1] mb-5"
                 style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)" }}
               >
-                100% halaal.{" "}
+                Halaal at heart.{" "}
                 <span className="font-handwritten text-orange" style={{ fontSize: "1.1em" }}>
-                  No compromises.
+                  Every day.
                 </span>
               </h2>
               <p className="text-base text-white/55 font-light leading-relaxed">
-                Every product, every supplier, every department across all three Checkstar branches is fully halaal-certified. This isn&apos;t a marketing position — it&apos;s a founding commitment we&apos;ve held since day one. Families across Durban, Overport, and Phoenix can shop with complete confidence.
+                Every product, every supplier, every department across all three Checkstar branches reflects our commitment to halaal values. This isn&apos;t a marketing position — it&apos;s a founding principle we&apos;ve held since day one. Families across Durban, Overport, and Phoenix can shop with confidence.
               </p>
             </AnimateOnScroll>
 

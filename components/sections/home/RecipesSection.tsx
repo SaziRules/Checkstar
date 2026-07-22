@@ -1,9 +1,17 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Clock, Users, ArrowRight, ChefHat } from "lucide-react";
 import { featuredRecipes } from "@/data/recipes";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
+import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { cn } from "@/lib/utils";
+import type { Recipe } from "@/types";
+
+function recipeFallback(recipe: Recipe): string {
+  const meatTags = ["Beef", "Chicken", "Lamb", "Peri-Peri", "Braai"];
+  if (recipe.tags.some((t) => meatTags.includes(t))) return "/images/fresh-meat.png";
+  if (recipe.category === "Baked" || recipe.category === "Salads") return "/images/veg.png";
+  return "/images/grocerry.jpg";
+}
 
 const difficultyColor = {
   Easy: "text-open bg-open-bg",
@@ -53,8 +61,9 @@ export function RecipesSection() {
                 className="group relative flex flex-col justify-end rounded-lg overflow-hidden bg-ink-200 h-80 lg:h-[500px]"
                 aria-label={`View recipe: ${hero.title}`}
               >
-                <Image
+                <ImageWithFallback
                   src={hero.image.src}
+                  fallback={recipeFallback(hero)}
                   alt={hero.image.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -103,9 +112,10 @@ export function RecipesSection() {
                   aria-label={`View recipe: ${recipe.title}`}
                 >
                   {/* Thumbnail */}
-                  <div className="relative w-28 h-full shrink-0 bg-ink-100">
-                    <Image
+                  <div className="relative w-28 h-28 shrink-0 bg-ink-100">
+                    <ImageWithFallback
                       src={recipe.image.src}
+                      fallback={recipeFallback(recipe)}
                       alt={recipe.image.alt}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

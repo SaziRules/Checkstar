@@ -5,6 +5,7 @@ import { PromotionsBand } from "@/components/sections/home/PromotionsBand";
 import { QuickAccessSection } from "@/components/sections/home/QuickAccessSection";
 import { DepartmentsSection } from "@/components/sections/home/DepartmentsSection";
 import { RecipesSection } from "@/components/sections/home/RecipesSection";
+import { AppPromoSection } from "@/components/sections/home/AppPromoSection";
 import { ConsumerServicesSection } from "@/components/sections/home/ConsumerServicesSection";
 import { CommunitySection } from "@/components/sections/home/CommunitySection";
 import { StoreLocatorSection } from "@/components/sections/home/StoreLocatorSection";
@@ -39,6 +40,7 @@ export default function HomePage() {
       <PromotionsBand />
       <DepartmentsSection />
       <RecipesSection />
+      <AppPromoSection />
       <ConsumerServicesSection />
       <CommunitySection />
       <StoreLocatorSection />

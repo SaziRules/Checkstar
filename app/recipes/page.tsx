@@ -20,7 +20,8 @@ const DIFFICULTY_STYLE = {
 };
 
 export default function RecipesPage() {
-  const [heroRecipe, ...otherFeatured] = featuredRecipes;
+  const [heroRecipe, ...rest] = featuredRecipes;
+  const otherFeatured = rest.slice(0, 2);
 
   return (
     <>
@@ -114,13 +115,12 @@ export default function RecipesPage() {
               )}
 
               {/* Side featured cards */}
-              <div className="lg:col-span-2 flex flex-col gap-5">
+              <div className="lg:col-span-2 flex flex-col gap-5 lg:h-[500px]">
                 {otherFeatured.map((recipe, i) => (
-                  <AnimateOnScroll key={recipe.id} delay={0.08 + i * 0.07}>
+                  <AnimateOnScroll key={recipe.id} delay={0.08 + i * 0.07} className="lg:flex-1 lg:min-h-0">
                     <Link
                       href={`/recipes/${recipe.slug}`}
-                      className="group relative h-[200px] lg:flex-1 rounded-sm overflow-hidden block"
-                      style={{ minHeight: "200px" }}
+                      className="group relative h-[200px] lg:h-full rounded-sm overflow-hidden block"
                       aria-label={`View recipe: ${recipe.title}`}
                     >
                       <Image

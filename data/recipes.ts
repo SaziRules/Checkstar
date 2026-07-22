@@ -55,7 +55,7 @@ export const recipes: Recipe[] = [
     description:
       "Golden, custardy slices of our Scratch Bakery bread, pan-fried with cinnamon and served with fresh banana and honey.",
     image: {
-      src: "https://images.unsplash.com/photo-1484723091739-30990a88bb8d?auto=format&fit=crop&q=80&w=800",
+      src: "/images/recipes/cinamon-toast.jpg",
       alt: "Golden cinnamon french toast with banana and honey",
     },
     tags: ["Breakfast", "Quick", "Family", "Baking"],
@@ -213,7 +213,7 @@ export const recipes: Recipe[] = [
     description:
       "Fire up the braai. Our butchery team's signature peri-peri marinade recipe using fresh Durban spices and free-range chicken cuts.",
     image: {
-      src: "https://images.unsplash.com/photo-1598103442097-8b74394b95c8?auto=format&fit=crop&q=80&w=800",
+      src: "/images/recipes/peri-peri-braai-chicken.jpg",
       alt: "Peri-peri chicken on the braai",
     },
     tags: ["Braai", "Chicken", "Peri-Peri", "Summer"],
@@ -250,7 +250,7 @@ export const recipes: Recipe[] = [
     description:
       "KwaZulu-Natal's most celebrated dish — fragrant basmati layered with slow-cooked spiced lamb, fried onions, and saffron. A true occasion meal.",
     image: {
-      src: "https://images.unsplash.com/photo-1563379091339-03246963d096?auto=format&fit=crop&q=80&w=800",
+      src: "/images/recipes/lamb-biryani.jpg",
       alt: "Durban lamb biryani in a pot",
     },
     tags: ["Dinner", "Lamb", "Durban", "Special Occasion", "South African"],
@@ -453,7 +453,7 @@ export const recipes: Recipe[] = [
     description:
       "Moist, warmly spiced carrot cake with a light cream cheese icing. A timeless bake using fresh carrots from our produce department.",
     image: {
-      src: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?auto=format&fit=crop&q=80&w=800",
+      src: "/images/recipes/spiced-carrot-cake.jpg",
       alt: "Slice of spiced carrot cake with cream cheese icing",
     },
     tags: ["Baking", "Cake", "Family", "Afternoon Tea"],

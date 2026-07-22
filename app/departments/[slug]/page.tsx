@@ -46,7 +46,7 @@ const DEPT_ENRICHMENT: Record<string, {
       { icon: Beef, title: "AAA-grade beef", body: "Hand-selected premium beef, graded for marbling, tenderness, and flavour." },
       { icon: Scissors, title: "Custom cuts", body: "Our blockmen cut to your order — from thick-cut steaks to braai strips and stewing cubes." },
       { icon: Star, title: "Artisanal marinades", body: "In-house marinades applied fresh — peri-peri, garlic herb, lemon pepper and more." },
-      { icon: Leaf, title: "Free-range poultry", body: "Free-range chicken and quality lamb sourced from trusted halaal-certified suppliers." },
+      { icon: Leaf, title: "Free-range poultry", body: "Free-range chicken and quality lamb sourced from trusted, responsible suppliers." },
     ],
   },
   "bakery": {
